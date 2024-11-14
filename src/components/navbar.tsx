@@ -13,9 +13,9 @@ const Navbar: React.FC<NavbarProp> = ({openSideBar, isSidebarOpen}) => {
     const [urls, setUrls] = useState<string[]>([]);
 
     useEffect(() => {
-        let url = pathname.slice(1).split('/');
+        const url = pathname.slice(1).split('/');
         setUrls(url);
-    },[])
+    })
 
     return (
         <nav className="w-full h-14 bg-gradient-to-r from-white from-75% to-yellow-400 to-[200%] flex justify-between items-center gap-4 px-3 sticky top-0">

@@ -7,7 +7,7 @@ export default function SharedLayout({children,}: Readonly<{ children: React.Rea
     const [isSidebarOpen, openSidebar] = useState(false);
 
     useEffect(() => {
-        let width = document.body.offsetWidth;
+        const width = document.body.offsetWidth;
         if (width >= 1280) {
             openSidebar(true);
         }
