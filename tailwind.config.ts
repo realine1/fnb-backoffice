@@ -1,22 +1,38 @@
 import type { Config } from "tailwindcss";
+import { nextui } from "@nextui-org/react";
 
 export default {
-  darkMode: 'selector',
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        mainColor: "var(--main-color)",
-        darkAccent: "var(--dark-accent)",
-        lightAccent: "var(--light-accent)"
-      },
+        background: "#fafafa",
+        foreground: "#171717",
+        mainColor: "#facc15",
+        darkAccent: "#eab308",
+        lightAccent: "#fde047",
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    nextui({
+      themes: {
+        light: {
+          colors: {
+            primary: {
+              DEFAULT: "#facc15",
+              foreground: "#000000",
+            },
+            focus: "#facc15",
+          },
+        },
+      },
+    }),
+  ],
 } satisfies Config;
