@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
@@ -16,7 +17,7 @@ export const NotFound = () => {
             Page not found
           </h1>
           <p className="mt-4 text-gray-500 dark:text-gray-400">
-            Sorry, the page you are looking for doesn't exist.Here are some
+            Sorry, the page you are looking for does not exist.Here are some
             helpful links:
           </p>
 
@@ -43,8 +44,8 @@ export const NotFound = () => {
               <span>Go back</span>
             </button>
 
-            <Link href="/">
-              <button className="w-1/2 px-5 py-2 text-sm tracking-wide text-white transition-colors duration-200 bg-yellow-500 rounded-lg shrink-0 sm:w-auto hover:bg-yellow-600 dark:hover:bg-yellow-500 dark:bg-yellow-600">
+            <Link href="/" className="w-1/2">
+              <button className="w-full px-5 py-2 text-sm tracking-wide text-white transition-colors duration-200 bg-yellow-500 rounded-lg shrink-0 sm:w-auto hover:bg-yellow-600 dark:hover:bg-yellow-500 dark:bg-yellow-600">
                 Take me home
               </button>
             </Link>
@@ -52,7 +53,13 @@ export const NotFound = () => {
         </div>
 
         <div className="relative w-full mt-12 lg:w-1/2 lg:mt-0">
-          <img className="w-full max-w-lg lg:mx-auto" src="/404.svg" alt="" />
+          <Image
+            src="/404.svg"
+            alt="Not Found"
+            width={860}
+            height={571}
+            className="w-full max-w-lg lg:mx-auto"
+          />
         </div>
       </div>
     </section>

@@ -7,11 +7,10 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
 export default function ToggleTheme() {
-  const [isDarkMode, setDarkMode] = useState(false);
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
-  const switchHandler = (isSelected: any) => {
+  const switchHandler = (isSelected: boolean) => {
     if(isSelected) {
         setTheme('light');
         return;
