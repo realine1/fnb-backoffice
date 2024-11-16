@@ -12,8 +12,6 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#fafafa",
-        foreground: "#171717",
         mainColor: "#facc15",
         darkAccent: "#eab308",
         lightAccent: "#fde047",
@@ -24,6 +22,15 @@ export default {
     nextui({
       themes: {
         light: {
+          colors: {
+            primary: {
+              DEFAULT: "#eab308",
+              foreground: "#000000",
+            },
+            focus: "#facc15",
+          },
+        },
+        dark: {
           colors: {
             primary: {
               DEFAULT: "#facc15",
