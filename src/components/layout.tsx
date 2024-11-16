@@ -11,6 +11,7 @@ import {
     NavbarMenuToggle
 } from "@nextui-org/react";
 import { useState } from "react";
+import ToggleTheme from "./toggleTheme";
 
 export default function SharedLayout({
   children,
@@ -83,7 +84,7 @@ export default function SharedLayout({
           <Listbox
             aria-label="Menu"
             onAction={(key) => console.log(key)}
-            className="p-0 gap-0 divide-y divide-default-300/50 dark:divide-default-100/80 bg-content1 min-w-52 max-w-[300px] overflow-auto shadow-small rounded-medium lg:my-3 lg:ml-3 lg:h-[calc(100vh-24px)] xl:my-5 xl:ml-5 xl:h-[calc(100vh-40px)]"
+            className="p-0 gap-0 divide-y divide-default-300/50 dark:divide-default-100/80 bg-white dark:bg-gray-800 min-w-52 max-w-[300px] overflow-auto shadow-small rounded-medium lg:my-3 lg:ml-3 lg:h-[calc(100vh-24px)] xl:my-5 xl:ml-5 xl:h-[calc(100vh-40px)]"
             itemClasses={{
               base: "px-3 first:rounded-t-medium last:rounded-b-medium rounded-none gap-3 h-12 data-[hover=true]:bg-default-100/80",
             }}
@@ -97,6 +98,7 @@ export default function SharedLayout({
           {children}
         </div>
       </div>
+      <ToggleTheme/>
     </>
   );
 }

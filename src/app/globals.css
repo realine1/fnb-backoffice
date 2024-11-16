@@ -4,22 +4,20 @@
 
 @layer utilities {
   ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 4px;
+    height: 4px;
   }
 
   ::-webkit-scrollbar-track {
     border-radius: 100vh;
-    background: #ffffff;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #facc15;
+    background: #6b7280;
     border-radius: 100vh;
-    border: 3px solid #f6f7ed;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #eab308;
+    background: #4b5563;
   }
 }
